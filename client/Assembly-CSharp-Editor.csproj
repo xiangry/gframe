@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{39F82118-F8BF-D8E3-F1DF-0400E26CD95B}</ProjectGuid>
+    <ProjectGuid>{2FC59FCE-BCB1-13D3-FB79-5DD1AF79A2AF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -53,22 +53,44 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Editor\Custom\CustomSettings.cs" />
      <Compile Include="Assets\Editor\KeyFunc\GKeyFuncActiveObject.cs" />
      <Compile Include="Assets\Editor\KeyFunc\GKeyFuncPath.cs" />
+     <Compile Include="Assets\ToLua\Editor\Extend\ToLua_LuaInterface_EventObject.cs" />
+     <Compile Include="Assets\ToLua\Editor\Extend\ToLua_LuaInterface_LuaConstructor.cs" />
+     <Compile Include="Assets\ToLua\Editor\Extend\ToLua_LuaInterface_LuaField.cs" />
+     <Compile Include="Assets\ToLua\Editor\Extend\ToLua_LuaInterface_LuaMethod.cs" />
+     <Compile Include="Assets\ToLua\Editor\Extend\ToLua_LuaInterface_LuaProperty.cs" />
+     <Compile Include="Assets\ToLua\Editor\Extend\ToLua_System_Delegate.cs" />
+     <Compile Include="Assets\ToLua\Editor\Extend\ToLua_System_Enum.cs" />
+     <Compile Include="Assets\ToLua\Editor\Extend\ToLua_System_Object.cs" />
+     <Compile Include="Assets\ToLua\Editor\Extend\ToLua_System_String.cs" />
+     <Compile Include="Assets\ToLua\Editor\Extend\ToLua_System_Type.cs" />
+     <Compile Include="Assets\ToLua\Editor\Extend\ToLua_UnityEngine_GameObject.cs" />
+     <Compile Include="Assets\ToLua\Editor\Extend\ToLua_UnityEngine_Input.cs" />
+     <Compile Include="Assets\ToLua\Editor\Extend\ToLua_UnityEngine_Object.cs" />
+     <Compile Include="Assets\ToLua\Editor\Extend\ToLua_UnityEngine_RectTransform.cs" />
+     <Compile Include="Assets\ToLua\Editor\ToLuaExport.cs" />
+     <Compile Include="Assets\ToLua\Editor\ToLuaMenu.cs" />
+     <Compile Include="Assets\ToLua\Editor\ToLuaTree.cs" />
+     <Compile Include="Assets\ToLua\Injection\Editor\ToLuaInjection.cs" />
+     <Compile Include="Assets\ToLua\Injection\Editor\ToluaInjectionBlackListPanel.cs" />
+     <Compile Include="Assets\ToLua\Injection\Editor\ToLuaInjectionHelper.cs" />
+     <Compile Include="Assets\ToLua\Injection\Editor\ToLuaText.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>D:/work/u3d/GFrame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>D:/work/u3d/GFrame/client/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>D:/work/u3d/GFrame/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>D:/work/u3d/GFrame/client/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>D:/work/u3d/GFrame/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>D:/work/u3d/GFrame/client/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>D:/work/u3d/GFrame/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>D:/work/u3d/GFrame/client/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>D:/work/u3d/GFrame/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ <HintPath>D:/work/u3d/GFrame/client/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity201804/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -308,19 +330,25 @@
  <HintPath>C:/Program Files/Unity201804/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Advertisements">
- <HintPath>D:/work/u3d/GFrame/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
+ <HintPath>D:/work/u3d/GFrame/client/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Editor">
- <HintPath>D:/work/u3d/GFrame/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+ <HintPath>D:/work/u3d/GFrame/client/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>D:/work/u3d/GFrame/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+ <HintPath>D:/work/u3d/GFrame/client/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
- <HintPath>D:/work/u3d/GFrame/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+ <HintPath>D:/work/u3d/GFrame/client/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Purchasing">
- <HintPath>D:/work/u3d/GFrame/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
+ <HintPath>D:/work/u3d/GFrame/client/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
+ </Reference>
+ <Reference Include="CString">
+ <HintPath>D:/work/u3d/GFrame/client/Assets/Plugins/CString.dll</HintPath>
+ </Reference>
+ <Reference Include="Debugger">
+ <HintPath>D:/work/u3d/GFrame/client/Assets/Plugins/Debugger.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity201804/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -682,6 +710,10 @@
  <Reference Include="Boo.Lang">
  <HintPath>C:/Program Files/Unity201804/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp.csproj">
+      <Project>{A2859A56-AB4A-51F9-60BB-1B6FC96E8C70}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
